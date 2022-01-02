@@ -9,3 +9,16 @@
 # The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 #
 # Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
+
+magic_nums = []
+
+for i in range(2, 500000):
+    num = str(i)
+    total = 0
+    for y in range(len(num)):
+        total += int(num[y]) ** 5
+    if i == total:
+        magic_nums.append(i)
+
+print(magic_nums)
+print(sum(magic_nums))
