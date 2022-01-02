@@ -30,3 +30,20 @@
 #  for j in range(999, 99, -1):
 #    number_with_three_digit_factors = i * j
 
+def is_palindrome(num):
+    num = str(num)
+    if num[0] == num[-1]:
+        if num[1] == num[-2]:
+            if num[2] == num[-3]:
+                print(num, 'is palindrome')
+                return True
+    else:
+        #print('not a palindrome')
+        return False
+
+
+for i in range(999, 99, -1):
+    for j in range(999, 99, -1):
+        final = i * j
+        if is_palindrome(final) == True:
+             print(final)
