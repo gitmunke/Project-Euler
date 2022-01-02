@@ -6,3 +6,22 @@
 #
 # What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
 
+import itertools
+
+
+#needs to be a string
+
+def lexicographic_permuation(x):
+    count = 0
+    perm = sorted(''.join(char) for char in itertools.permutations(x))
+    for y in perm:
+       count += 1
+       if count == 1000000:
+           print(y)
+
+           
+           
+
+
+digits = '0123456789'
+lexicographic_permuation(digits)
