@@ -3,3 +3,13 @@
 # What is the sum of the digits of the number 2^1000?
 
 
+num = 2 ** 1000
+num = str(num)
+length = len(num)
+sum = 0
+x = 0
+for i in range(length):
+    x = int(num[i])
+    sum += x
+
+print(sum)
