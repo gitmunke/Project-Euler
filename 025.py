@@ -21,3 +21,19 @@
 #
 # What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
 
+num = 0
+index = 1
+a = 0
+b = 1
+
+
+
+while len(str(num)) < 1000:
+    num = a + b
+    index += 1
+    print(index, num)
+    a = b
+    b = num
+
+
+print(index)
