@@ -12,22 +12,3 @@
 # Which starting number, under one million, produces the longest chain?
 #
 # NOTE: Once the chain starts the terms are allowed to go above one million.
-def find_biggest_chain_under(max) :
-    big_chain_start_val = 1
-    bigchain = 1
-    for num in range(max, 100, -1) :
-        count = 1
-        startingnum = num
-        while num != 1 :
-            count +=1
-            if num % 2 == 0 :
-                num = int(num/2)
-            else :
-                num = int(num *3) +1
-        if count > bigchain :
-            print (startingnum, 'is the num', 'count is:', count)
-            big_chain_start_val = startingnum
-            bigchain = count
-    return big_chain_start_val
-print(find_biggest_chain_under(1000000))
-

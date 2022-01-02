@@ -6,14 +6,3 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the
 # even-valued terms.
 
-a = 1
-b = 2
-total = 2
-c = 0
-while c <= 4000000 :
-    c = a + b
-    if c % 2 == 0 :
-        total = total + c
-    a = b
-    b = c
-print(total)
