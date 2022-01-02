@@ -104,3 +104,7 @@ nums_strings = [
     "53503534226472524250874054075591789781264330331690"
 ]
 
+nums_strings = [int(x) for x in nums_strings]
+
+total = sum(nums_strings)
+print(total)
