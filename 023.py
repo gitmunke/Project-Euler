@@ -11,3 +11,37 @@
 # less than this limit.
 #
 # Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
+
+def sum_proper_divisors(inp):
+    inp = int(inp)
+    final = []
+    for div in range(1, inp // 2 + 1):
+        if inp % div == 0:
+            final.append(div)
+    return sum(final)
+
+
+abundant = []
+
+for x in range(1, 28123):
+    if sum_proper_divisors(x) > x:
+        abundant.append(x)
+
+sum_of_two_abundant = []
+
+def sum_of_abundant(x):
+    if x < 24:
+        return False
+    for n in range(x):
+        if x - abundant[n] in abundant:
+            return True
+        if abundant[n] > x:
+            return False
+
+not_sum = []
+
+for x in range(1,28123):
+    if sum_of_abundant(x) == False:
+        not_sum.append(x)
+
+print(sum(not_sum))
