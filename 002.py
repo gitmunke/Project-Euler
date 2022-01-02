@@ -8,12 +8,12 @@
 
 a = 1
 b = 2
-c = a +b
-sum = 2
+total = 2
+c = 0
 while c <= 4000000 :
-    if c % 2 ==0 :
-        sum +=c
+    c = a + b
+    if c % 2 == 0 :
+        total = total + c
     a = b
     b = c
-    c= a+b
-print (sum)
+print(total)
