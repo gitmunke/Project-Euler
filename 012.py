@@ -19,3 +19,32 @@
 
 # largest factor is n/2, but if you check n/i & n/i*2 at same time
 # like 28 % 2 != 0, so add 2 to count of divisors. 
+
+def is_prime(num):
+    if num == 1:
+        return False
+    if num == 2:
+        return True
+    if num % 2 == 0:
+        return False
+    for x in range(2, num):
+        if x * x > num:
+            break
+        if num % x == 0:
+            return False
+     
+    return True
+import math
+
+tn = 0
+for i in range(1000000000): #generation
+    div = 0
+    tn += i + 1
+    for x in range(1, tn): # counting divisors
+        if x * x > tn:
+            break
+        if tn % x == 0:
+            div += 2
+            if div > 500:
+                print(tn)
+                break
