@@ -11,3 +11,12 @@
 # What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 
 
+start = 1
+interval = 0
+total = 1
+for i in range(1, 1001, 2):
+    interval += 1
+    for x in range(4):
+        start += 2 * interval
+        total += start
+print(total)
