@@ -12,3 +12,35 @@
 # Which starting number, under one million, produces the longest chain?
 #
 # NOTE: Once the chain starts the terms are allowed to go above one million.
+
+#even or odd function
+def is_even(num):
+    return num % 2 == 0
+
+#collatz even and odd
+def col_even(num):
+    return num / 2
+
+def col_odd(num):
+    return num * 3 + 1
+
+start = 1
+starting_num = 1
+longest = 1
+terms = 1
+
+for num in range(2, 1000000):
+    terms = 1
+    start = num
+    while num != 1:
+        if is_even(num):
+            num = col_even(num)
+            terms += 1
+        else:
+            num = col_odd(num)
+            terms += 1
+    if terms >= longest:
+        longest = terms
+        starting_num = start
+        print(starting_num, 'produces the longest chain ', longest)
+print(starting_num, 'produces the longest chain ', longest)
