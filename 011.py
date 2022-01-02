@@ -50,3 +50,51 @@ grid = [
     "01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"
 ]
 
+#split by space, is it now a list of lists of ints? i think so
+
+for i in range(20):
+    grid[i] = grid[i].split()
+    grid[i] = [int(x) for x in grid[i]]
+#grid[0] is now a list of integers in the first row
+
+
+#horizontal
+hor_final = 0
+for y in range(20): #columns
+    for x in range(16): #because were looking at 4 numbers each loop, rows
+        hor_subtotal = 0
+        hor_subtotal = grid[y][x] * grid[y][x + 1] * grid[y][x + 2] * grid[y][x + 3]
+        if hor_subtotal > hor_final:
+            hor_final = hor_subtotal
+            
+print('largest horizontal is ', hor_final)
+
+#vertical
+vert_final = 0
+for y in range(16):
+    for x in range(20):
+        vert_subtotal = 0
+        vert_subtotal = grid[y][x] * grid[y + 1][x] * grid[y +2][x] * grid[y + 3][x]
+        if vert_subtotal > vert_final:
+            vert_final = vert_subtotal
+
+print('largest vertical is ', vert_final)
+
+#diagonal
+diag_final = 0
+#diagonal going down
+for y in range(16):
+    for x in range(16):
+        diag_subtotal = 0
+        diag_subtotal = grid[y][x] * grid[y + 1][x + 1] * grid[y + 2][x + 2] * grid[y + 3][x + 3]
+        if diag_subtotal > diag_final:
+            diag_final = diag_subtotal
+#going up
+for y in range(16):
+    for x in range(16):
+        diag_subtotal = 0
+        diag_subtotal = grid[y + 3][x] * grid[y + 2][x + 1] * grid[y + 1][x + 2] * grid[y][x + 3]
+        if diag_subtotal > diag_final:
+            diag_final = diag_subtotal
+
+print('largest diagonal is ', diag_final)
