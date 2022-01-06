@@ -3,20 +3,17 @@
 # What is the largest prime factor of the number 600851475143 ?
 
 import math
+import utilities
+#inp = input('check for prime ')
+#num = int(inp)
 
-inp = input('check for prime ')
-num = int(inp)
+largest = 0
+
+for x in range(1, 775146):
+    if 600851475143 % x == 0:
+        if utilities.is_prime(x) == True:
+            if x > largest:
+                largest = x
 
 
-def is_prime(num):
-    start = 2
-    lpg = int(math.sqrt(num))
-    while start <= lpg:
-        if num % start == 0:
-            print(start, 'is a factor')
-            return False        
-        start = start + 1
-    print(num, 'is prime')
-    return True
-
-print(is_prime(num))
+print(largest)
