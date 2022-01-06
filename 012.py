@@ -37,7 +37,7 @@ def is_prime(num):
 import math
 
 tn = 0
-for i in range(1000000000): #generation
+for i in range(10000): #generation
     div = 0
     tn += i + 1
     for x in range(1, tn): # counting divisors
