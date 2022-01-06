@@ -23,25 +23,39 @@ designated these as 'suboptimal solutions'. That's not to say that the quick one
 may in fact still be brute-force solutions. My secondary goal is to gradually optimize all solutions.
 
 ## Progress
-### 16 / 100 Complete!
+### 30 / 100 Complete!
 
-0 suboptimal solutions
+2 suboptimal solutions
 
 | File   | Running Time |
 | :----- | :----------- |
-| 001.py | 0.180292s |
-| 002.py | 0.03593s |
-| 003.py | 0.10556s |
-| 004.py | 0.030659s |
-| 005.py | 6.597644s |
-| 006.py | 0.030811s |
-| 007.py | 0.193142s |
-| 008.py | 0.030108s |
-| 009.py | 0.033925s |
-| 010.py | 11.917177s |
-| 011.py | 0.030708s |
-| 012.py | 1.270554s |
-| 013.py | 0.032038s |
-| 014.py | 0.032623s |
-| 015.py | 0.031282s |
-| 016.py | 0.030323s |
+| 001.py | 0.031754s |
+| 002.py | 0.025931s |
+| 003.py | 0.090802s |
+| 004.py | 0.31435s |
+| 005.py | 0.030119s |
+| 006.py | 0.026499s |
+| 007.py | 0.209479s |
+| 008.py | 0.309047s |
+| 009.py | 0.116687s |
+| 010.py | 10.834026s |
+| 011.py | 0.032798s |
+| 012.py | 4.007246s |
+| 013.py | 0.027058s |
+| 014.py | *35.281401s* |
+| 015.py | 0.027735s |
+| 016.py | 0.025943s |
+| 017.py | 0.041036s |
+| 018.py | 0.074801s |
+| 019.py | 0.034293s |
+| 020.py | 0.032911s |
+| 021.py | 1.485742s |
+| 022.py | 0.046855s |
+| 023.py | **279.390913s** |
+| 024.py | 0.951585s |
+| 025.py | 0.352059s |
+| 026.py | 0.200526s |
+| 027.py | 0.218443s |
+| 028.py | 0.029957s |
+| 029.py | 0.365014s |
+| 030.py | 1.165237s |
