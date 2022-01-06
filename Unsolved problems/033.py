@@ -7,3 +7,5 @@
 # digits in the numerator and denominator.
 #
 # If the product of these four fractions is given in its lowest common terms, find the value of the denominator.
+
+print(49 / 98)
