@@ -21,8 +21,6 @@ def digit_sum(inp):
     return total
 
 
-butt = False
-while butt != True:
-    c = input('gimme a numbah! ')
-    print(digit_sum(factorial(c)))
+
+ print(digit_sum(factorial(100)))
     
