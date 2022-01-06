@@ -5,13 +5,13 @@
 
 import itertools
 
-r = str(0)
-d = str(1)
+#r = str(0)
+#d = str(1)
 
-moves = [r, r, r, r, r, r, r, r, r, r, d, d, d, d, d, d, d, d, d, d]
-perm = itertools.permutations(moves)
+#moves = [r, r, r, r, r, r, r, r, r, r, d, d, d, d, d, d, d, d, d, d]
+#perm = itertools.permutations(moves)
 
-for i in set(perm):
-    print(i)
+#for i in set(perm):
+#    print(i)
 
 #got answer with a combination calculator, my computer couldnt handle it
